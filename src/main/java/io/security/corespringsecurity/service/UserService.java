@@ -7,8 +7,13 @@ import java.util.List;
 
 public interface UserService {
 
-  List<Account> getUsers();
-  UserDto getUser(Long id);
-  void createUser(Account account);
-  void deleteUser(Long idx);
+    Account findByUsername(String username);
+
+    List<Account> getUsers();
+
+    UserDto getUser(Long id);
+
+    void createUser(Account account);
+
+    void deleteUser(Long idx);
 }

@@ -1,6 +1,7 @@
 server:
   servlet:
     session:
+      timeout: 12h
       cookie:
         name: JSESSIONID
 
@@ -9,6 +10,7 @@ spring:
     store-type: redis
     redis:
       namespace: corespring:session
+      time-to-live: 43200s
   data:
     redis:
       host: localhost

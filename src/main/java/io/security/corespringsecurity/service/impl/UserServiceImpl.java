@@ -58,6 +58,11 @@ public class UserServiceImpl implements UserService {
         return userDto;
     }
 
+    @Override
+    public Account findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
+
     @Transactional
     public List<Account> getUsers() {
         return userRepository.findAll();

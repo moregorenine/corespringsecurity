@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-	
+
 	@Autowired
 	private UserDetailsServiceImpl userDetailsService;
-	
+
 	@GetMapping(value="/")
 	public String home() throws Exception {
+
 		return "home";
 	}
 
